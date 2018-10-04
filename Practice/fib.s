@@ -31,8 +31,8 @@ fib:
     sw $a0, 4($sp) # Save a0 (n) before calling fib
     jal fib # fib(n - 1)
     add $t0, $v0, $zero # Store return of first fib call in $t0
-
     sw $t0 0($sp) # Store t0 in stack frame
+
     lw $a0, 4($sp) # Load a0 (n)
     addi $a0, -1,
     jal fib # fib(n - 2)
